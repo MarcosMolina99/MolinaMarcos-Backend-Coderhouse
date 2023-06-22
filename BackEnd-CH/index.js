@@ -20,7 +20,7 @@ class ProductManager { //clase
         console.log("Every field must be completed");
       }
       this.#products.push({
-        id: this.id++,  
+        id: this.#id++,  
         title,
         description,
         price,
