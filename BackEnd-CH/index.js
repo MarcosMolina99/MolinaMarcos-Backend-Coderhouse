@@ -108,19 +108,4 @@ class ProductManager { //clase
 
   }
   
-  const item = {
-    title: 'product',
-    description: 'new testing product',
-    price: 50,
-    thumbnail: 'No image',
-    code: 'qwe987',
-    stock: 10
-  };
-  
   const product = new ProductManager();
-  console.log(product.getProducts());
-  product.addProduct(item);
-   product.addProduct(item);
-  console.log(product.getProducts());
-  product.addProduct(item);
-  console.log(product.getProductById(1))

@@ -1,3 +1,26 @@
 {
-    "type": "module"
+  "type": "module",
+  "name": "backend-ch",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MarcosMolina99/MolinaMarcos-Backend-Coderhouse.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MarcosMolina99/MolinaMarcos-Backend-Coderhouse/issues"
+  },
+  "homepage": "https://github.com/MarcosMolina99/MolinaMarcos-Backend-Coderhouse#readme",
+  "description": "",
+  "dependencies": {
+    "express": "^4.18.2",
+    "nodemon": "^2.0.22"
+  }
 }
