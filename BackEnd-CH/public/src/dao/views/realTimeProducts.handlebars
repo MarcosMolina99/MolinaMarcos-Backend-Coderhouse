@@ -1,0 +1,69 @@
+<div>
+    <h2>RealTime Products</h2>
+    <form id="Form" method="POST" action="/realtimeproducts">
+        <label for="productName">Product Name</label>
+        <input
+            type="text"
+            id="productName"
+            name="name"
+            placeholder="product´s name" 
+        />
+
+        <label for="productTitle">Title</label>
+        <input
+            type="text"
+            id="productTitle"
+            name="title"
+            placeholder="product´s title" 
+        />
+
+        <label for="productDescription">Description</label>
+        <textarea
+            id="productDescription"
+            name="description"
+            placeholder="product´s name" 
+        ></textarea>
+
+
+        <label for="productPrice">Price</label>
+        <input
+            type="numbre"
+            id="productPrice"
+            name="price"
+            step="1"
+            placeholder="product´s price" 
+        />
+
+        <label for="productThumbnail">Thumbnail</label>
+        <input
+            type="text"
+            id="productThumbnail"
+            name="code"
+            placeholder="product´s thumbnail" 
+        />
+
+        <label for="productStock">Stock</label>
+        <input
+            type="number"
+            id="productStock"
+            name="stock"
+            placeholder="product´s stock" 
+        />
+
+        <button type="submit">Add</button>
+    </form>
+
+    <ul id="productList">
+        {{#each products}}
+        <li>
+            <h2>{{name}}</h2>
+            <h2>{{title}}</h2>
+            <p>{{description}}</p>
+            <h2>{{price}}</h2>
+            <img {{thumbnail}} />
+            <button class="btnDelete" data-id="{{id}}">Delete</button>
+        </li>
+        {{/each}}
+    </ul>
+
+</div>
