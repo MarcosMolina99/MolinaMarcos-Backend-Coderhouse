@@ -1,0 +1,10 @@
+[
+    {
+        "title": "product",
+        "description": "new testing product",
+        "price": 50,
+        "thumbnail": "No image",
+        "code": "qwe987",
+        "stock": 10
+  }
+]
