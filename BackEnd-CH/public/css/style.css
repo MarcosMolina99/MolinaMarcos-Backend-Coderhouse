@@ -1,0 +1,52 @@
+body{
+    margin: 0%;
+    padding: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+div{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 14px;
+    background-color: azure;
+    text-align: center;
+}
+
+.repeatPassword{
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.newPassword{
+    font-weight: bold;
+    font-size: 16px;
+    box-shadow: none;
+}
+
+.username{
+    font-weight: bold;
+    font-size: 16px;
+}
+
+label{
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.form{
+    max-width: 200px;
+}
+
+input{
+    border: 1px solid black;
+}
+
+button{
+    border: 1px solid black;
+    max-width: 50px;
+    max-height: 50px;
+    text-align: center;
+    padding: 10px;
+}
