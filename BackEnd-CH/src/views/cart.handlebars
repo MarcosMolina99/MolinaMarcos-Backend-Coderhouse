@@ -1,0 +1,13 @@
+<h1>Cart</h1>
+
+<div>
+    {{#each products}}
+    <ul>
+        <img src="{{this.product.thumbnail}}" alt="{{this.product.title}}" style="width: 100px; border-radius:10px; margin: 10px;">
+        <li>{{this.product.title}}</li>
+        <li>{{this.product.code}}</li>
+        <li>{{this.product.category}}</li>
+        <li>{{this.product.price}}</li>
+    </ul>
+    {{/each}}
+</div>

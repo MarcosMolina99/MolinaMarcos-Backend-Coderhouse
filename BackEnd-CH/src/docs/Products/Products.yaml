@@ -1,0 +1,113 @@
+paths:
+  /api/products/:
+    get:
+      summary: Gets all products
+      tags:
+        - Products
+      responses:
+        "200":
+          description: Received products successfuly
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Product"
+        "500":
+          description: Error
+
+  /api/products/{pid}:
+    get:
+      summary: Get a product from its ID
+      tags:
+        - Products
+      parameters:
+        - name: pid
+          in: path
+          required: true
+          description: ID to get the product
+          schema:
+            type: String
+      responses:
+        "200":
+          description: Got the product successfuly
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Product"
+        "500":
+          description: Error
+
+    put:
+      summary: Update a product from its ID
+      tags:
+        - Products
+      parameters:
+        - name: pid
+          in: path
+          required: true
+          description: Send the ID for the product to modify
+          schema:
+            type: String
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/UpdateProductRequest"
+
+components:
+  schemas:
+    Product:
+      type: object
+      properties:
+        name:
+          type: String
+          description: Product´s name
+        description:
+          type: String
+          description: Product´s description
+        price:
+          type: Number
+          description: Product´s price
+        category:
+          type: String
+          description: Product´s category
+        availability:
+          type: Number
+          description: Product´s availability
+        owner:
+          type: String
+          description: Owner
+      example:
+        name: "Example"
+        description: "Example´s description"
+        price: 0.99
+        category: "Clothes"
+        availability: 2
+        owner: "Admin"
+
+    UpdateProductRequest:
+      type: object
+      properties:
+        name:
+          type: String
+          description: Product´s name
+        description:
+          type: String
+          description: Product´s description
+        price:
+          type: Number
+          description: Product´s price
+        category:
+          type: String
+          description: product´s category
+        availability:
+          type: Number
+          description: Product´s availability
+      example:
+        name: "New example"
+        description: "New example´s description"
+        price: 5.00
+        category: "Sale"
+        availability: 10
